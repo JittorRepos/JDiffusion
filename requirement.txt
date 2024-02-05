@@ -1,0 +1,4 @@
+git+https://github.com/JittorRepos/jittor
+git+https://github.com/JittorRepos/jtorch
+git+https://github.com/JittorRepos/diffusers_jittor
+git+https://github.com/JittorRepos/transformers_jittor
