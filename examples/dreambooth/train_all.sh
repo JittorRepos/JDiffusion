@@ -13,7 +13,7 @@ LR_SCHEDULER="constant"
 LR_WARMUP_STEPS=0
 MAX_TRAIN_STEPS=500
 SEED=0
-GPU_COUNT=8
+GPU_COUNT=2
 MAX_NUM=42
 
 for ((folder_number = 0; folder_number <= $MAX_NUM; folder_number+=$GPU_COUNT)); do
@@ -35,7 +35,6 @@ for ((folder_number = 0; folder_number <= $MAX_NUM; folder_number+=$GPU_COUNT));
             --resolution=$RESOLUTION \
             --train_batch_size=$TRAIN_BATCH_SIZE \
             --gradient_accumulation_steps=$GRADIENT_ACCUMULATION_STEPS \
-            --checkpointing_steps=$CHECKPOINTING_STEPS \
             --learning_rate=$LEARNING_RATE \
             --lr_scheduler=$LR_SCHEDULER \
             --lr_warmup_steps=$LR_WARMUP_STEPS \
