@@ -27,7 +27,7 @@ for ((folder_number = 0; folder_number <= $MAX_NUM; folder_number+=$GPU_COUNT));
         CUDA_VISIBLE_DEVICES=$gpu_id
         PROMPT=$(printf "style_%02d" $current_folder_number)
 
-        COMMAND="CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES python train_no_accelerator.py \
+        COMMAND="CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES python train.py \
             --pretrained_model_name_or_path=$MODEL_NAME \
             --instance_data_dir=$INSTANCE_DIR \
             --output_dir=$OUTPUT_DIR \

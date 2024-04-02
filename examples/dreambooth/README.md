@@ -16,8 +16,8 @@ pip install peft
 
 ## 推理
 
-1. 将 `train.py` 中的 `dataset_root` 修改为数据集对应的目录，将 `max_num` 修改为数据集中的风格个数；
-2. 运行 `python train.py` 进行训练，对应的图片会输出到 `output` 文件夹。
+1. 将 `run_all.py` 中的 `dataset_root` 修改为数据集对应的目录，将 `max_num` 修改为数据集中的风格个数；
+2. 运行 `python run_all.py` 进行训练，对应的图片会输出到 `output` 文件夹。
 
 
 ## 参考文献
