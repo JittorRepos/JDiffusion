@@ -18,12 +18,15 @@ Our code is based on JTorch, a high-performance dynamically compiled deep learni
 
 ```bash
 pip install git+https://github.com/JittorRepos/jittor
+# replace torch source by jittor
+pip install torch -i https://pypi.jittor.org/simple -I
 pip install git+https://github.com/JittorRepos/jtorch
 pip install git+https://github.com/JittorRepos/diffusers_jittor
 pip install git+https://github.com/JittorRepos/transformers_jittor
 ```
 or just
 ```bash
+pip install torch -i https://pypi.jittor.org/simple -I
 pip install -r requirement.txt
 ```
 ### 2. Install JDiffusion
