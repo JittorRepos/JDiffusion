@@ -38,6 +38,8 @@ We also provide a docker image about our environment.
 ```bash
 # Install CuPy from source
 pip install cupy
+# Install CuPy for cuda11.2 (Recommand, change cuda version you use)
+pip install cupy-cuda112
 ```
 
 ## Usage
