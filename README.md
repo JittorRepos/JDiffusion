@@ -31,7 +31,7 @@ pip install -r requirement.txt
 cd JDiffusion
 pip install -e .
 ```
-We also provide a [docker image](https://cg.cs.tsinghua.edu.cn/jittor/assets/jdiffusion.tar) about our environment.
+We also provide a [docker image](https://cg.cs.tsinghua.edu.cn/jittor/assets/jdiffusion.tar) (md5:62c305028dae6e62d3dff885d5bc9294) about our environment.
 
 ### 3.Optional Requirements
  If you encounter `No module named 'cupy'`:
