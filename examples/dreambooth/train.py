@@ -459,6 +459,7 @@ def encode_prompt(text_encoder, input_ids, attention_mask, text_encoder_use_atte
 
 
 def main(args):
+    jt.flags.use_cuda = 1
     # Make one log on every process with the configuration for debugging.
     logging.basicConfig(
         format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
@@ -508,12 +509,6 @@ def main(args):
     # For mixed precision training we cast all non-trainable weights (vae, non-lora text_encoder and non-lora unet) to half-precision
     # as these weights are only used for inference, keeping weights in full precision is not required.
     weight_dtype = jt.float32
-
-    # Move unet, vae and text_encoder to device and cast to weight_dtype
-   #unet.to("cuda", dtype=weight_dtype)
-   #if vae is not None:
-   #    vae.to("cuda", dtype=weight_dtype)
-   #text_encoder.to("cuda", dtype=weight_dtype)
 
     for name, param in unet.named_parameters():
         assert param.requires_grad == False, name
@@ -616,7 +611,7 @@ def main(args):
 
     for epoch in range(first_epoch, args.num_train_epochs):
         for step, batch in enumerate(train_dataloader):
-            pixel_values = batch["pixel_values"].to("cuda", dtype=weight_dtype)
+            pixel_values = batch["pixel_values"].to(dtype=weight_dtype)
 
             # Convert images to latent space
             model_input = vae.encode(pixel_values).latent_dist.sample()
