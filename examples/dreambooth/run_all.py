@@ -17,6 +17,6 @@ with torch.no_grad():
 
         for id, prompt in prompts.items():
             print(prompt)
-            image = pipe(prompt + f" in style_{taskid}", num_inference_steps=25).images[0]
+            image = pipe(prompt + f" in style_{taskid}", num_inference_steps=25, width=512, height=512).images[0]
             os.makedirs(f"./output/{taskid}", exist_ok=True)
             image.save(f"./output/{taskid}/{prompt}.png")
