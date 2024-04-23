@@ -1,13 +1,14 @@
 import json, os, tqdm, torch
 
-from diffusers import DiffusionPipeline
+from JDiffusion.pipelines import StableDiffusionPipeline
 
-max_num = 43
+max_num = 15
 dataset_root = "the-path-to-dataset"
 
 with torch.no_grad():
-    for taskid in tqdm.tqdm(range(0, max_num)):
-        pipe = DiffusionPipeline.from_pretrained("stabilityai/stable-diffusion-2-1").to("cuda")
+    for tempid in tqdm.tqdm(range(0, max_num)):
+        taskid = "{:0>2d}".format(tempid)
+        pipe = StableDiffusionPipeline.from_pretrained("stabilityai/stable-diffusion-2-1").to("cuda")
         pipe.load_lora_weights(f"style/style_{taskid}")
 
         # load json
