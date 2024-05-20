@@ -5,7 +5,7 @@ from JDiffusion.pipelines import StableDiffusionPipeline
 max_num = 15
 dataset_root = "the-path-to-dataset"
 
-with torch.no_grad():
+with jt.no_grad():
     for tempid in tqdm.tqdm(range(0, max_num)):
         taskid = "{:0>2d}".format(tempid)
         pipe = StableDiffusionPipeline.from_pretrained("stabilityai/stable-diffusion-2-1").to("cuda")
