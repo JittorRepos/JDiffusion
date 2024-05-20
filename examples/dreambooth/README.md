@@ -6,7 +6,7 @@
 
 首先按照 [JDiffusion 的安装指导](../../README.md)安装必要的依赖，除此之外还需要安装 `peft` 库依赖。
 ```
-pip install peft
+pip install peft==0.10.0
 ```
 ## 训练
 
