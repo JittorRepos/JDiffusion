@@ -1,4 +1,5 @@
-import json, os, tqdm, torch
+import json, os, tqdm
+import jittor as jt
 
 from JDiffusion.pipelines import StableDiffusionPipeline
 
