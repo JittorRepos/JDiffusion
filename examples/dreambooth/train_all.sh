@@ -1,7 +1,7 @@
 #!/bin/bash
 export HF_ENDPOINT="https://hf-mirror.com"
 
-MODEL_NAME="stabilityai/stable-diffusion-2-1"
+MODEL_NAME="Charles-Elena/stable-diffusion-2-1"
 BASE_INSTANCE_DIR="the-path-to-dataset"
 OUTPUT_DIR_PREFIX="style/style_"
 RESOLUTION=512
