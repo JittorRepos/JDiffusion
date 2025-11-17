@@ -4,7 +4,7 @@
 
 ## 环境安装
 
-首先按照 [JDiffusion 的安装指导](../../README.md)安装必要的依赖，除此之外还需要安装 `peft` 库依赖。
+首先按照 [JDiffusion 的安装指导](../../README.md)安装必要的依赖，请严格按照要求安装，除此之外还需要安装 `peft` 库依赖。
 ```
 pip install accelerate==0.27.2
 pip install peft==0.10.0
